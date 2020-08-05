@@ -1,0 +1,44 @@
+#formulario-login input {
+    font-family: Montserrat-LightItalic, sans-serif;
+}
+
+#formulario-registrar input {
+    font-family: Montserrat-LightItalic, sans-serif;
+}
+
+#title-register-confirmed h2 {
+    font-family: Montserrat-Italic, sans-serif;
+    color: rgb(0, 124, 255);
+    margin: 5rem 0 0 7rem;
+    font-size: 50px;
+}
+
+#text-register-confirmed p {
+    font-family: Montserrat-Italic, sans-serif;
+    font-size: 25px;
+}
+
+#text-register-confirmed a {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-LightItalic;
+    src: url("../fonts/Montserrat/Montserrat-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-ExtraLight;
+    src: url("../fonts/Montserrat/Montserrat-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-Italic;
+    src: url("../fonts/Montserrat/Montserrat-Italic.ttf");
+}
