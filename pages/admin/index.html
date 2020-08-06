@@ -21,18 +21,20 @@
         .sidebar {
             min-width: 230px;
             max-width: 230px;
+            padding-top: 55px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            overflow-y: scroll;
             background: rgb(157, 201, 255);
             color: #000000;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
             transition: all 0.3s;
             font-family: Montserrat-MediumItalic, sans-serif;
         }
 
-        .sidebar .sidebar-header {
-            padding: 10px;
-            background: rgba(255, 204, 25, 0.1);
-        }
-
-        .sidebar ul p {
+        .sidebar-header {
+            border-bottom: 3px solid rgb(95, 132, 177);
             padding: 10px;
         }
 
@@ -43,6 +45,7 @@
         }
 
         .sidebar ul li a:hover {
+            font-weight: bold;
             background: rgb(249, 169, 160);
         }
 
@@ -72,22 +75,20 @@
         ul ul a:hover {
             background: rgb(249, 169, 160);
         }
-
-
-
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-light fixed-top bg-light flex-md-nowrape p-0 shadow">
-        <a href="/3G/pages/admin/index.html" class="navbar-brand col-sm-3 col-md-2 mr-0" id="logo-name">
-            <img src="../../images/Poker-logo-img-branco.png" alt="" width="17%">
-            <span>G3T</span>
+        <a href="" class="navbar-brand col-sm-3 col-md-2 mr-0" id="logo-name">
+            <img src="../../images/logo-company/logo_transparent.png" alt="" width="50%">
         </a>
         <ul class="navbar-nav px-3" id="logout-button">
             <li class="nav-item text-nowrape">
-                <a href="/3G/pages/login.html" class="nav-link">
-                    <button class="btn btn-info">Sair</button>
+                <a href="" class="nav-link">
+                    <button class="btn btn-info">
+                        Sair
+                    </button>
                 </a>
             </li>
         </ul>
@@ -97,11 +98,11 @@
         <div class="row">
             <nav class="sidebar">
                 <div class="sidebar-header">
-                    <h3>Poker</h3>
+                    <img src="../../images/logo-parceiros/logo-poker.png" alt="">
                 </div>
 
                 <ul class="list-unstyled">
-                    <li class="active">
+                    <li>
                         <a href="/3G/pages/admin/clientes.html">
                             <span class="fas fa-users"></span>
                             <span style="margin-left: 10px">
@@ -112,8 +113,8 @@
                 </ul>
 
                 <ul class="list-unstyled">
-                    <li class="active">
-                        <a href="">
+                    <li>
+                        <a href="/3G/pages/admin/pedidos.html">
                             <span class="fab fa-product-hunt"></span>
                             <span style="margin-left: 10px">
                                 Pedidos
@@ -132,7 +133,7 @@
                         </a>
                         <ul class="collapse list-unstyled" id="catalogoSubMenu">
                             <li>
-                                <a href="">Bola</a>
+                                <a href="/3G/pages/admin/catalogos/bola.html">Bola</a>
                             </li>
                             <li>
                                 <a href="">Luvas</a>
@@ -162,21 +163,20 @@
                     </li>
                 </ul>
             </nav>
+
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
+                <div class="d-flex justify-contem-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom title-info">
+                    <h1 class="h2">
+                        Seja Bem Vindo
+                    </h1>
+                </div>
+
+                <div class="row" id="content">
+                    <img src="../../images/admin-page/index-image.png" alt="" width="70%" style="margin-left: 100px">
+                </div>
+            </main>
         </div>
     </div>
-
-    <main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
-        <div class="d-flex justify-contem-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom title-info">
-            <h1 class="h2">
-                Seja Bem Vindo
-            </h1>
-        </div>
-
-        <div class="row">
-            <img src="../../images/admin-page/index-image.png" alt="" width="70%">
-        </div>
-    </main>
-
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

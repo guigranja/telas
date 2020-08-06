@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Clientes</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/3e4ce87fa3.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../../style/admin.css">
@@ -21,18 +24,20 @@
         .sidebar {
             min-width: 230px;
             max-width: 230px;
+            padding-top: 55px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            overflow-y: scroll;
             background: rgb(157, 201, 255);
             color: #000000;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
             transition: all 0.3s;
             font-family: Montserrat-MediumItalic, sans-serif;
         }
 
-        .sidebar .sidebar-header {
-            padding: 10px;
-            background: rgba(255, 204, 25, 0.1);
-        }
-
-        .sidebar ul p {
+        .sidebar-header {
+            border-bottom: 3px solid rgb(95, 132, 177);
             padding: 10px;
         }
 
@@ -43,6 +48,7 @@
         }
 
         .sidebar ul li a:hover {
+            font-weight: bold;
             background: rgb(249, 169, 160);
         }
 
@@ -72,22 +78,20 @@
         ul ul a:hover {
             background: rgb(249, 169, 160);
         }
-
-
-
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-light fixed-top bg-light flex-md-nowrape p-0 shadow">
-        <a href="/3G/pages/admin/index.html" class="navbar-brand col-sm-3 col-md-2 mr-0" id="logo-name">
-            <img src="../../images/Poker-logo-img-branco.png" alt="" width="17%">
-            <span>G3T</span>
+        <a href="" class="navbar-brand col-sm-3 col-md-2 mr-0" id="logo-name">
+            <img src="../../images/logo-company/logo_transparent.png" alt="" width="50%">
         </a>
         <ul class="navbar-nav px-3" id="logout-button">
             <li class="nav-item text-nowrape">
-                <a href="/3G/pages/login.html" class="nav-link">
-                    <button class="btn btn-info">Sair</button>
+                <a href="" class="nav-link">
+                    <button class="btn btn-info">
+                        Sair
+                    </button>
                 </a>
             </li>
         </ul>
@@ -97,27 +101,27 @@
         <div class="row">
             <nav class="sidebar">
                 <div class="sidebar-header">
-                    <h3>Poker</h3>
+                    <img src="../../images/logo-parceiros/logo-poker.png" alt="">
                 </div>
 
                 <ul class="list-unstyled">
-                    <li class="active">
+                    <li>
                         <a href="/3G/pages/admin/clientes.html">
                             <span class="fas fa-users"></span>
                             <span style="margin-left: 10px">
-                                    Clientes
-                                </span>
+                                Clientes
+                            </span>
                         </a>
                     </li>
                 </ul>
 
                 <ul class="list-unstyled">
-                    <li class="active">
-                        <a href="">
+                    <li>
+                        <a href="/3G/pages/admin/pedidos.html">
                             <span class="fab fa-product-hunt"></span>
                             <span style="margin-left: 10px">
-                                    Pedidos
-                                </span>
+                                Pedidos
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -127,8 +131,8 @@
                         <a href="#catalogoSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <span class="fas fa-warehouse"></span>
                             <span style="margin-left: 10px">
-                                    Catálago
-                                </span>
+                                Catálago
+                            </span>
                         </a>
                         <ul class="collapse list-unstyled" id="catalogoSubMenu">
                             <li>
@@ -162,111 +166,110 @@
                     </li>
                 </ul>
             </nav>
+
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom title-info">
+                    <h1 class="h2">
+                        Dados dos clientes
+                    </h1>
+
+                    <div class="mb-2 mb-md-0 input-search col-6">
+                        <div class=" input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Buscar por CNPJ" aria-label="Buscar por CNPJ" aria-describedby="search">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary" type="button">
+                                    <i class="fas fa-search-plus fa-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="/3G/pages/admin/register-client.html">
+                        <button class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Adicionar Novo Cliente">
+                            <i class="fas fa-user-plus fa-lg"></i>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card client-info" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Empresa Teste LTDA</h5>
+                                <p class="card-text">CNPJ: </p>
+                                <p class="card-text">Nome Cliente:</p>
+                                <a href="">
+                                    <button class="btn btn-outline-info btn-sm">
+                                        <i class="fas fa-user-edit"></i>
+                                    </button>
+                                </a>
+                                <a href="" class="client-card-btn">
+                                    <button class="btn btn-outline-warning btn-sm">
+                                        <i class="fas fa-users-slash"></i>
+                                    </button>
+                                </a>
+                                <a href="">
+                                    <button class="btn btn-outline-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card client-info" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Empresa Teste LTDA</h5>
+                                <p class="card-text">CNPJ: </p>
+                                <p class="card-text">Nome Cliente:</p>
+                                <a href="">
+                                    <button class="btn btn-outline-info btn-sm">
+                                        <i class="fas fa-user-edit"></i>
+                                    </button>
+                                </a>
+                                <a href="" class="client-card-btn">
+                                    <button class="btn btn-outline-warning btn-sm">
+                                        <i class="fas fa-users-slash"></i>
+                                    </button>
+                                </a>
+                                <a href="">
+                                    <button class="btn btn-outline-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card client-info" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Empresa Teste LTDA</h5>
+                                <p class="card-text">CNPJ: </p>
+                                <p class="card-text">Nome Cliente:</p>
+                                <a href="">
+                                    <button class="btn btn-outline-info btn-sm">
+                                        <i class="fas fa-user-edit"></i>
+                                    </button>
+                                </a>
+                                <a href="" class="client-card-btn">
+                                    <button class="btn btn-outline-warning btn-sm">
+                                        <i class="fas fa-users-slash"></i>
+                                    </button>
+                                </a>
+                                <a href="">
+                                    <button class="btn btn-outline-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     </div>
-
-    <main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
-        <div class="d-flex justify-contem-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom title-info">
-            <h1 class="h2">
-                Dados dos clientes
-            </h1>
-
-            <div class="mb-2 mb-md-0 input-search col-6">
-                <div class=" input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Buscar por CNPJ" aria-label="Buscar por CNPJ" aria-describedby="search">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button">
-                            <i class="fas fa-search-plus fa-lg"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <a href="/3G/pages/admin/register-client.html">
-                <button class="btn btn-outline-primary">
-                    <i class="fas fa-user-plus fa-lg"></i>
-                </button>
-            </a>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card client-info" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Empresa Teste LTDA</h5>
-                        <p class="card-text">CNPJ: </p>
-                        <p class="card-text">Nome Cliente:</p>
-                        <a href="">
-                            <button class="btn btn-outline-info btn-sm">
-                                <i class="fas fa-user-edit"></i>
-                            </button>
-                        </a>
-                        <a href="" class="client-card-btn">
-                            <button class="btn btn-outline-warning btn-sm">
-                                <i class="fas fa-users-slash"></i>
-                            </button>
-                        </a>
-                        <a href="">
-                            <button class="btn btn-outline-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card client-info" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Empresa Teste LTDA</h5>
-                        <p class="card-text">CNPJ: </p>
-                        <p class="card-text">Nome Cliente:</p>
-                        <a href="">
-                            <button class="btn btn-outline-info btn-sm">
-                                <i class="fas fa-user-edit"></i>
-                            </button>
-                        </a>
-                        <a href="" class="client-card-btn">
-                            <button class="btn btn-outline-warning btn-sm">
-                                <i class="fas fa-users-slash"></i>
-                            </button>
-                        </a>
-                        <a href="">
-                            <button class="btn btn-outline-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card client-info" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Empresa Teste LTDA</h5>
-                        <p class="card-text">CNPJ: </p>
-                        <p class="card-text">Nome Cliente:</p>
-                        <a href="">
-                            <button class="btn btn-outline-info btn-sm">
-                                <i class="fas fa-user-edit"></i>
-                            </button>
-                        </a>
-                        <a href="" class="client-card-btn">
-                            <button class="btn btn-outline-warning btn-sm">
-                                <i class="fas fa-users-slash"></i>
-                            </button>
-                        </a>
-                        <a href="">
-                            <button class="btn btn-outline-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</div>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
