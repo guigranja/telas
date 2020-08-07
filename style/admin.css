@@ -34,6 +34,10 @@
     margin: 0 5px 0 5px;
 }
 
+.sub-title {
+    font-family: Montserrat-MediumItalic, monospace;
+}
+
 @font-face {
     font-family: Montserrat-Medium;
     src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
