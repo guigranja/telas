@@ -1,45 +1,9 @@
-#logout-button button {
-    font-weight: 700;
-}
-
-#logo-name span {
-    margin-left: 1rem;
-    font-family: Montserrat-MediumItalic, sans-serif;
-}
-
-.text-sidebar {
-    color: #6b6b6b;
-}
-
-.text-sidebar:hover {
-    color: #6b6b6b;
-}
-
-.title-info {
-    padding: 70px 0 0 0;
-    font-family: Montserrat-Medium, sans-serif;
-}
-
-.input-search {
-    margin: 0 0 0 206px;
-}
-
-.client-info {
-    margin: 20px 0 0 0;
-    border: 1px solid rgb(41, 71, 163);
-    box-shadow: 2px 2px rgb(179, 198, 255);
-}
-
-.client-card-btn {
-    margin: 0 5px 0 5px;
-}
-
-.sub-title {
-    font-family: Montserrat-MediumItalic, monospace;
-}
-
-.title-main {
+.title-main-client {
     font-family: Pangolin-Regular, monospace;
+    padding: 10px 0 0 0;
+    content: "";
+    margin-left: calc(100% - 68%);
+    font-size: 50px;
 }
 
 .bg-dropleft-navbar {
@@ -49,6 +13,11 @@
 
 .items-dropleft-navbar {
     font-family: Montserrat-LightItalic, sans-serif;
+    margin-left: 3px;
+}
+
+.items-dropleft-navbar-total {
+    font-family: Montserrat-SemiBoldItalic, sans-serif;
 }
 
 @font-face {
@@ -79,4 +48,19 @@
 @font-face {
     font-family: Pangolin-Regular;
     src: url("../fonts/Pangolin/Pangolin-Regular.ttf");
+}
+
+@font-face {
+    font-family: RedRose-Light;
+    src: url("../fonts/Red_Rose/RedRose-Light.ttf");
+}
+
+@font-face {
+    font-family: RedRose-Bold;
+    src: url("../fonts/Red_Rose/RedRose-Bold.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-BlackItalic;
+    src: url("../fonts/Montserrat/Montserrat-BlackItalic.ttf");
 }

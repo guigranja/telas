@@ -89,19 +89,21 @@
 <body>
 
     <nav class="navbar navbar-light fixed-top bg-light flex-md-nowrape p-0 shadow">
-        <a href="" class="navbar-brand col-sm-3 col-md-2 mr-0" id="logo-name">
+        <a href="/3G/pages/admin/index.html" class="navbar-brand col-sm-3 col-md-2 mr-0" id="logo-name">
             <img src="../../images/logo-company/logo_transparent.png" alt="" width="50%">
         </a>
-        <ul class="navbar-nav nav-dropdown px-3" id="logout-button">
-            <li class="nav-item dropdown text-nowrape">
-                <button class="btn btn-outline-info dropdown-toggle" id="info-admin" data-toggle="dropdown" aria-expanded="false">
-                    <i class="far fa-user-circle fa-lg"></i>
-                </button>
-                <div class="dropdown-menu">
-                    <a href="" class="dropdown-item">Teste</a>
-                </div>
-            </li>
-        </ul>
+
+        <div class="dropleft pr-4">
+            <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-user-circle fa-lg"></i>
+            </button>
+            <div class="dropdown-menu bg-dropleft-navbar" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item items-dropleft-navbar" href="#">
+                    <i class="fas fa-user-edit"></i>
+                    Editar Meus Dados
+                </a>
+            </div>
+        </div>
     </nav>
 
     <div class="container-fluid">
@@ -174,7 +176,7 @@
                 </ul>
 
                 <div class="sair-btn">
-                    <a href="" class="btn btn-dark btn-block sair-btn-text">
+                    <a href="/3G/pages/login-admin.html" class="btn btn-dark btn-block sair-btn-text">
                         Sair
                     </a>
                 </div>
@@ -182,13 +184,13 @@
 
             <main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
                 <div class="d-flex justify-contem-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom title-info">
-                    <h1 class="h2">
+                    <h1 class="title-main">
                         Seja Bem Vindo
                     </h1>
                 </div>
 
                 <div class="row" id="content">
-                    <img src="../../images/admin-page/index-image.png" alt="" width="70%" style="margin-left: 100px">
+                    <img src="../../images/admin-page/index-image.png" alt="" width="60%" style="margin-left: 150px">
                 </div>
             </main>
         </div>

@@ -1,3 +1,12 @@
+.formulario-login-title, .formulario-register-title {
+    font-family: LexendZetta-Regular, monospace;
+    padding: 0 0 0 160px;
+}
+
+.btn-login, .btn-register {
+    font-family: Montserrat-Bold, sans-serif;
+}
+
 #formulario-login input {
     font-family: Montserrat-LightItalic, sans-serif;
 }
@@ -23,6 +32,35 @@
     font-weight: bolder;
 }
 
+.btn-login-admin-color {
+    color: #fff;
+    background-color: rgb(196, 134, 231);
+    border-color: rgb(196, 134, 231);
+    font-family: Montserrat-Bold, sans-serif;
+}
+
+.btn-login-admin-color:hover {
+    color: #ffffff;
+    background-color: rgb(198, 102, 231);
+    border-color: rgb(196, 134, 231);
+    font-family: Montserrat-Bold, sans-serif;
+}
+
+.btn-admin {
+    margin-left: 380px;
+    background-color: transparent;
+    color: rgb(54, 69, 95);
+    border-color: rgb(54, 69, 95);
+    font-family: Montserrat-Bold, sans-serif;
+}
+
+.btn-admin:hover {
+    background-color: rgb(54, 69, 95);
+    border-color: rgb(54, 69, 95);
+    color: #ffffff;
+    font-family: Montserrat-Bold, sans-serif;
+}
+
 @font-face {
     font-family: Montserrat-Bold;
     src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
@@ -41,4 +79,9 @@
 @font-face {
     font-family: Montserrat-Italic;
     src: url("../fonts/Montserrat/Montserrat-Italic.ttf");
+}
+
+@font-face {
+    font-family: LexendZetta-Regular;
+    src: url("../fonts/Lexend_Zetta/LexendZetta-Regular.ttf");
 }
